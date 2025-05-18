@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{ /*cor da página e margem para ocupar o espaço inteiro*/
+            margin: 0;
+            background-color: beige;
+        }
+
+        .container { /*cria container para distribuir os elementos*/
+            display: grid;
+            color: white;
+        }
+
+        header { /*cor e posição do cabeçalho*/
+            grid-column-start:  1;
+            grid-column-end:  12;
+            background-color: brown;
+        }
+
+        .h1 { /*titulo do tópico*/
+            color:rebeccapurple;
+            text-align: center;
+        }
+        p{ font-size: 30px;
+            justify-content: center;
+        }
+
+        ul { 
+            list-style-type: none;
+
+        }
+
+        .imagem { /*posiciona a imagem na direita*/
+            border-radius: 10%;
+            position: center;
+        } 
+        .tabela, th, td {
+        border-collapse:collapse;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid rgb(160 160 160);}
+
+        a:hover { /*cor dos links ao passar o cursor*/
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Este é um comentário <header class="container">-->
+        <h1 class="h1">Jonatan Germano</h1>
+        <br>
+    <!--</header>-->
+    <p>
+    Me chamo Jonatan, tenho 21 anos de idade, nasci em Curitiba, estou cursando ADS
+    </p>
+    <button onclick="msg()">Clique para ver uma mensagem!</button>
+
+    <div id="mensagembotao"></div>
+
+    <script>
+        function msg() {
+            var container = document.getElementById("mensagembotao");
+            var mensagemM = document.createElement("p");
+            mensagemM.textContent = "Sejam Bem-Vindos e Bem-Vindas!";
+            container.appendChild(mensagemM);   
+        }
+    </script>
+    <ul>
+        <li>Cinema</li><br>
+        <li>Videogames</li><br>
+        <li>Ler</li>
+    </ul>
+   
+   <img src="Cinema.jpg" width="20%" height="10%" class="imagem"> 
+    <table width="50%" border = "2px" class="tabela">
+        <tr>
+            <th>País</th>  
+        </tr>
+        <tr>
+            <td>Rep.Dominicana</td>
+            <td><img src="rep.dominicana.jpeg" width="10%" height="10%"></td>
+        </tr>
+        <tr>
+            <td>Polônia</td>
+            <td><img src="varsovia-polonia.jpg" width="10%" height="10%"></td></td>
+        </tr>
+        <tr>
+            <td>Egito</td>
+            <td><img src="egito.png" width="10%" height="10%"></td></td>
+        </tr>
+   </table>
+   <a href="https://www.twitch.tv">Twitch</a>
+</body>
+</html>
